@@ -20,3 +20,12 @@ Route::get('/', function () {
 
 //CA2
 Route::get('/send-email', [MailController::class,'sendEmail']);
+
+//Ca3
+Route::post('/Register',function(){
+    return view('Register');
+});
+Route::get('/Register',[RegisterController::class,'SaveData']);
+Route::get('/LoginPage',function(){
+    return view('LoginPage');
+});
