@@ -19,6 +19,14 @@ Route::get('/', function () {
 });
 
 //CA2
+Route::get('/Sum',function(){
+    return view('Sum');
+});
+Route::post('/Sum',[SumController::class, 'Print']);
+Route::get('upload',function(){
+    return view('Upload');
+});
+Route::post('upload',[UploadController::class,'uploadFile'])->name('upload.uploadFile');
 Route::get('/send-email', [MailController::class,'sendEmail']);
 
 //Ca3
