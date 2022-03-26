@@ -7,8 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    Enter First Number: <input type="number" name="fnum">
-    Enter Second Number: <input type="number" name="snum">
-    <input type="submit">
+<form method="POST" action="Sum" enctype="multipart/form-data">
+    @csrf
+    <table>
+        <tr>
+            <td>Enter First Number</td>
+            <td><input type="number" name="fnum"><br></td>
+        </tr>
+        <tr>
+            <td>Enter Second Number</td>
+            <td><input type="number" name="snum"><br></td>
+        </tr>
+    </table>
+
+
+@error('sum')
+<div>{{$message}}</div>
+@enderror
+
+    <input type="submit" value="Add">
+    </form>
 </body>
 </html>
