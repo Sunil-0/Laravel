@@ -9,17 +9,12 @@ use App\Http\Controllers\Controller;
 
 class MailController extends Controller
 {
-    public function sendEmail(){
-        /**$details = [
-            'title' => 'Mail from Sunil',
-            'body' => 'This is for testing mail'
-        ];
-        
-        Mail::to("11912049lpu@gmail.com")->send(new TestMail($details));
-        return "Email Sent";**/
+
+    public function sendEmail(Request $request){
+        $to = $request->temail;
         $data = array('name'=>"Sunil");
         Mail::send("mail",$data,function($message){
-            $message->to('11912049lpu@gmail.com', 'sample')->subject("Testing");
+            $message->to($to, 'sample')->subject("Testing");
             $message->from('ksrsk000@gmail.com',"Sunil");
         });
         echo "email is sent";

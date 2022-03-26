@@ -8,7 +8,6 @@
 <body>
 
     <form method="POST" action="upload" enctype="multipart/form-data">
-    @csrf
     <h2>student Profile</h2>
     <table>
         <tr>
@@ -36,10 +35,6 @@
             <td colspan="2"><input type="file" name="file" id="file"> <br></td>
         </tr>
     </table>
-
-@error('Application')
-<div>{{$message}}</div>
-@enderror
 
     <input type="submit">Upload</input>
     </form>
