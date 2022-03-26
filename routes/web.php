@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Sum;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\MailController;
 /*
 |--------------------------------------------------------------------------
@@ -27,13 +28,16 @@ Route::get('upload',function(){
     return view('Upload');
 });
 Route::post('upload',[UploadController::class,'uploadFile'])->name('upload.uploadFile');
+Route::post('/semail', function(){
+    return view('mail_Input');
+});
 Route::get('/send-email', [MailController::class,'sendEmail']);
 
 //Ca3
-Route::post('/Register',function(){
+Route::get('/Register',function(){
     return view('Register');
 });
-Route::get('/Register',[RegisterController::class,'SaveData']);
+Route::post('/Register',[RegisterController::class,'SaveData']);
 Route::get('/LoginPage',function(){
     return view('LoginPage');
 });
