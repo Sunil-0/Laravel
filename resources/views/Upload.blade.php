@@ -41,7 +41,7 @@
 <div>{{$message}}</div>
 @enderror
 
-    <button type="submit">Upload</button>
+    <input type="submit">Upload</input>
     </form>
 </body>
 </html>
