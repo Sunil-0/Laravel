@@ -20,7 +20,6 @@
         </tr>
     </table>
 
-
 @error('sum')
 <div>{{$message}}</div>
 @enderror

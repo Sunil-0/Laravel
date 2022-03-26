@@ -10,6 +10,6 @@ class SumController extends Controller
     //
     
     public function Print(Request $request){
-        echo $request->fnum + $request->snum;
+        echo ($request->fnum + $request->snum);
     }
 }

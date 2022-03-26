@@ -8,6 +8,6 @@
 </head>
 <body>
     <h1>{{$name}}</h1>
-    <p>Thank you</p>
+    <p>Thank You</p>
 </body>
 </html>

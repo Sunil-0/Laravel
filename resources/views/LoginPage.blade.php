@@ -10,7 +10,7 @@
     <div>
         <form action="Home">
             <?php
-                echo 
+                
             ?>
         </form>
     </div>
